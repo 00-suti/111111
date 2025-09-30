@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陈宋玲 - 个人信息</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#f472b6',
+                        neutral: '#f3f4f6',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            .bg-gradient-custom {
+                background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            }
+            .card-hover {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.1), 0 10px 10px -5px rgba(99, 102, 241, 0.04);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+    <!-- 顶部导航栏 -->
+    <nav class="bg-white shadow-md fixed w-full z-10 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="text-xl font-bold text-primary">陈宋玲</div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="hover:text-primary transition-colors">关于我</a>
+                <a href="#major" class="hover:text-primary transition-colors">专业信息</a>
+                <a href="#contact" class="hover:text-primary transition-colors">联系方式</a>
+            </div>
+            <button class="md:hidden text-gray-600 focus:outline-none" id="menu-toggle">
+                <i class="fa fa-bars text-xl"></i>
+            </button>
+        </div>
+        <!-- 移动端菜单 -->
+        <div class="md:hidden hidden bg-white w-full" id="mobile-menu">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+                <a href="#about" class="py-2 hover:text-primary transition-colors">关于我</a>
+                <a href="#major" class="py-2 hover:text-primary transition-colors">专业信息</a>
+                <a href="#contact" class="py-2 hover:text-primary transition-colors">联系方式</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <header class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-custom text-white">
+        <div class="container mx-auto px-4 flex flex-col items-center text-center">
+            <div class="w-32 h-32 md:w-40 md:h-40 rounded-full bg-white p-1 mb-6 shadow-lg">
+                <img src="https://picsum.photos/200/200?random=1" alt="陈宋玲的个人照片" class="w-full h-full object-cover rounded-full">
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-shadow">陈宋玲</h1>
+            <p class="text-xl md:text-2xl opacity-90 mb-8">艺术与设计学院 · 学生</p>
+            <div class="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full text-white flex items-center space-x-2">
+                <i class="fa fa-id-card-o"></i>
+                <span>学号: 1023008317</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <!-- 关于我部分 -->
+        <section id="about" class="mb-16">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl font-bold mb-8 text-center text-gray-800">关于我</h2>
+                <div class="bg-white rounded-xl shadow-md p-8 card-hover">
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        大家好，我是陈宋玲，目前就读于艺术与设计学院。我对设计充满热情，尤其擅长将创意理念转化为视觉作品。
+                        在校期间，我不仅专注于专业知识的学习，还积极参与各类设计实践项目，不断提升自己的设计技能和审美能力。
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        我相信设计不仅是视觉的表达，更是解决问题的方式。未来希望能在设计领域不断探索，创造出有意义、有温度的作品。
+                    </p>
+                    
+                    <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="bg-neutral rounded-lg p-4 text-center">
+                            <i class="fa fa-paint-brush text-primary text-2xl mb-2"></i>
+                            <h3 class="font-medium">创意设计</h3>
+                        </div>
+                        <div class="bg-neutral rounded-lg p-4 text-center">
+                            <i class="fa fa-camera text-primary text-2xl mb-2"></i>
+                            <h3 class="font-medium">摄影</h3>
+                        </div>
+                        <div class="bg-neutral rounded-lg p-4 text-center">
+                            <i class="fa fa-pencil text-primary text-2xl mb-2"></i>
+                            <h3 class="font-medium">插画</h3>
+                        </div>
+                        <div class="bg-neutral rounded-lg p-4 text-center">
+                            <i class="fa fa-desktop text-primary text-2xl mb-2"></i>
+                            <h3 class="font-medium">数字艺术</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 专业信息部分 -->
+        <section id="major" class="mb-16">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl font-bold mb-8 text-center text-gray-800">专业信息</h2>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-r from-purple-400 to-pink-500 relative">
+                        <img src="https://picsum.photos/800/300?random=2" alt="艺术与设计学院" class="w-full h-full object-cover opacity-50">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <h3 class="text-2xl md:text-3xl font-bold text-white text-shadow">艺术与设计学院</h3>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <h4 class="text-xl font-semibold mb-2 text-gray-800">专业简介</h4>
+                            <p class="text-gray-700">
+                                艺术与设计学院致力于培养具有创新精神和实践能力的高素质设计人才。课程涵盖视觉传达设计、环境设计、产品设计等多个领域，
+                                注重理论与实践相结合，培养学生的综合设计能力和审美素养。
+                            </p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="text-xl font-semibold mb-2 text-gray-800">我的学习重点</h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex items-start">
+                                        <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                        <span>视觉传达设计原理</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                        <span>数字媒体设计与应用</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                        <span>品牌形象设计</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                        <span>交互设计基础</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-xl font-semibold mb-2 text-gray-800">学术信息</h4>
+                                <ul class="space-y-3 text-gray-700">
+                                    <li class="flex items-center p-3 bg-neutral rounded-lg">
+                                        <i class="fa fa-id-card text-primary text-xl w-10"></i>
+                                        <div>
+                                            <div class="text-sm text-gray-500">学号</div>
+                                            <div class="font-medium">1023008317</div>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-center p-3 bg-neutral rounded-lg">
+                                        <i class="fa fa-graduation-cap text-primary text-xl w-10"></i>
+                                        <div>
+                                            <div class="text-sm text-gray-500">学院</div>
+                                            <div class="font-medium">艺术与设计学院</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系方式部分 -->
+        <section id="contact">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl font-bold mb-8 text-center text-gray-800">联系方式</h2>
+                <div class="bg-white rounded-xl shadow-md p-8 card-hover">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4 text-gray-800">联系我</h3>
+                            <p class="text-gray-700 mb-6">
+                                如果你有任何问题或合作意向，欢迎通过以下方式联系我。
+                            </p>
+                            <ul class="space-y-4">
+                                <li class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                                        <i class="fa fa-envelope"></i>
+                                    </div>
+                                    <span class="text-gray-700">email@example.com</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                                        <i class="fa fa-phone"></i>
+                                    </div>
+                                    <span class="text-gray-700">138 **** 8888</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                                        <i class="fa fa-map-marker"></i>
+                                    </div>
+                                    <span class="text-gray-700">中国 · 北京</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4 text-gray-800">社交媒体</h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                <a href="#" class="flex items-center p-4 bg-neutral rounded-lg hover:bg-primary/10 transition-colors">
+                                    <i class="fa fa-weixin text-2xl text-green-500 mr-3"></i>
+                                    <span>微信</span>
+                                </a>
+                                <a href="#" class="flex items-center p-4 bg-neutral rounded-lg hover:bg-primary/10 transition-colors">
+                                    <i class="fa fa-weibo text-2xl text-red-500 mr-3"></i>
+                                    <span>微博</span>
+                                </a>
+                                <a href="#" class="flex items-center p-4 bg-neutral rounded-lg hover:bg-primary/10 transition-colors">
+                                    <i class="fa fa-instagram text-2xl text-pink-500 mr-3"></i>
+                                    <span>Instagram</span>
+                                </a>
+                                <a href="#" class="flex items-center p-4 bg-neutral rounded-lg hover:bg-primary/10 transition-colors">
+                                    <i class="fa fa-behance text-2xl text-blue-500 mr-3"></i>
+                                    <span>Behance</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-4">陈宋玲 © 2023</p>
+            <p class="text-gray-400 text-sm">艺术与设计学院 · 学号: 1023008317</p>
+        </div>
+    </footer>
+
+    <script>
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('py-2', 'bg-white/95', 'backdrop-blur-sm');
+                navbar.classList.remove('py-3', 'bg-white');
+            } else {
+                navbar.classList.add('py-3', 'bg-white');
+                navbar.classList.remove('py-2', 'bg-white/95', 'backdrop-blur-sm');
+            }
+        });
+
+        // 移动端菜单切换
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                // 关闭移动菜单（如果打开）
+                document.getElementById('mobile-menu').classList.add('hidden');
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // 添加页面加载动画
+        window.addEventListener('load', function() {
+            document.body.classList.add('opacity-100');
+            document.body.classList.remove('opacity-0');
+        });
+    </script>
+</body>
+</html>
